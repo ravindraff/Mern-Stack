@@ -4,6 +4,8 @@ const mongoose = require('mongoose')
 const Registeruser = require('./model')
 const jwt = require('jsonwebtoken')
 const middleware = require('./middleware') 
+const cors = require('cors')
+app.use(cors({origin: '*'}))
 app.use(express.json())
 mongoose.connect("mongodb+srv://admin:admin@mycluster.zvdho.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
     useUnifiedTopology: true,
